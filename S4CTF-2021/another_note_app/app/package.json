@@ -1,0 +1,19 @@
+{
+  "name": "anothernoteapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "parrot",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "puppeteer": "^9.0.0",
+    "uuid": "^8.3.2",
+    "uuidv4": "^6.2.7"
+  }
+}

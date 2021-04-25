@@ -1,0 +1,9 @@
+critical_heap:
+    build: ./
+    volumes:
+        - ./share:/home/heap_heap:ro
+        - ./xinetd:/etc/xinetd.d/critical_heap:ro
+        - ./tmp:/tmp:ro
+        - ./flag:/flag:ro
+    ports:
+        - "2000:1337"

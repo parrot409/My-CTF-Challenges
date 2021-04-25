@@ -1,0 +1,15 @@
+service critical_heap
+{
+        disable = no
+        type = UNLISTED
+        wait = no
+        server = /home/manga_store/run.sh
+        socket_type = stream
+        protocol = tcp
+        user = manga_store
+        port = 1337
+        flags = REUSE
+        per_source = 2
+        rlimit_cpu = 3
+        nice = 18
+}

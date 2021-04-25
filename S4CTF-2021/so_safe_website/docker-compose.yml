@@ -1,0 +1,21 @@
+version: '2'
+services:
+    proxy:
+        build: ./proxy
+        ports:
+            - 7070:80
+        depends_on:
+            - fmn
+    fmn:
+        hostname: fmn
+        build: ./
+        environment:
+            - CAPTCHA_SECRET_KEY=1337
+            - url=http://sosafewebsite.peykar.io:7070/
+            - flag=S4CTF{0hhhhh_y0u_r34lly_byp4553d_c5p_4nd_7ru573d_7yp35??}
+        volumes:
+            - ./app:/app
+        expose:
+            - 4000
+        cap_add:
+            - SYS_ADMIN

@@ -1,0 +1,15 @@
+another_note_app:
+    build: ./
+    environment:
+        - CAPTCHA_SECRET_KEY=1337
+        - FLAG=S4CTF{533m5_l1k3_my_n073_4pp_15n'7_54f3_3n0u6h}
+        - AUTH_TOKEN=9f1579b0d2dc0bc43ebebde6bb8e8ba2
+        - MAIN_URL=http://139.162.238.54:9090
+        - NOTE_URL=http://139.162.238.54:9091
+    volumes:
+        - ./app:/app
+    ports:
+        - "9090:4000"
+        - "9091:4001"
+    cap_add:
+        - SYS_ADMIN

@@ -1,0 +1,9 @@
+manga_store:
+    build: ./
+    volumes:
+        - ./share:/home/manga_store:ro
+        - ./xinetd:/etc/xinetd.d/critical_heap:ro
+        - ./tmp:/tmp:ro
+        - ./flag:/flag:ro
+    ports:
+        - "2000:1337"

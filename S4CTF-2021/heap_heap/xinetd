@@ -1,0 +1,15 @@
+service critical_heap
+{
+        disable = no
+        type = UNLISTED
+        wait = no
+        server = /home/heap_heap/run.sh
+        socket_type = stream
+        protocol = tcp
+        user = heap_heap
+        port = 1337
+        flags = REUSE
+        per_source = UNLIMITED
+        rlimit_cpu = 3
+        nice = 18
+}
