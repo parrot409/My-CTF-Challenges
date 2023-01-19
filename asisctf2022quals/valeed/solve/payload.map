@@ -1,0 +1,8 @@
+GLIBC_2.34 {
+        global: __libc_start_main;puts;
+        local:  *;      # Hide all other symbols
+};
+GLIBC_2.2.5 {
+        global: __libc_start_main;puts;
+        local:  *;      # Hide all other symbols
+};

